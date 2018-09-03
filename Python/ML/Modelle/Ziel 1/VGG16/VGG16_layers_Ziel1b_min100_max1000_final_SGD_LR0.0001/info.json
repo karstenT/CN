@@ -1,0 +1,26 @@
+{
+    "caffe flavor": "NVIDIA",
+    "caffe version": "0.15.14",
+    "creation time": "2018-06-11 09:16:34.230235",
+    "dataset_id": "20180502-154757-1cfc",
+    "deploy file": "deploy.prototxt",
+    "digits version": "6.0.0",
+    "framework": "caffe",
+    "id": "20180611-091634-6283",
+    "image dimensions": [
+        224,
+        224,
+        3
+    ],
+    "image resize mode": "squash",
+    "job id": "20180611-091634-6283",
+    "labels file": "labels.txt",
+    "mean file": "mean.binaryproto",
+    "model file": "original.prototxt",
+    "name": "VGG_ILSVRC_16_layers_finetuning_Ziel1b_min100_max1000_final_SGD_LR0.0001",
+    "snapshot file": "snapshot_iter_9872.caffemodel",
+    "solver file": "solver.prototxt",
+    "status": "Done",
+    "train_val file": "train_val.prototxt",
+    "username": "loyal"
+}

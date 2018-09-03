@@ -1,0 +1,28 @@
+Um die Tests durchzuführen müssen, je nach Modell, ein paar interne Parameter angepasst werden:
+
+
+test_one.py
+
+testFile = "/test/caracalla/caracalla79.png"
+groundTruth = "caracalla"
+	Hier muss der Pfad zum zu testenden Bild samt der Ground Truth eingetragen werden
+
+net.blobs['data'].reshape(1, 3, 224, 224)
+	Hier muss die größe der Bilder entsprechend dem Modell eingefügt werden. Für VGG16 kann die Zeile so belassen werden, für AlexNet muss die Zeile zu
+	net.blobs['data'].reshape(1, 3, 227, 227) abgeändert werden.
+
+
+
+testtop5.py
+
+testDir = "/test/"
+	Hier muss der Pfad zum Ordner mit den Testbildern eingefügt werden
+
+img = img.resize((224,224), Image.ANTIALIAS)
+	Hier muss die größe der Bilder entsprechend dem Modell eingefügt werden. Für VGG16 kann die Zeile so belassen werden, für AlexNet muss die Zeile zu
+	img = img.resize((227,227), Image.ANTIALIAS) abgeändert werden.
+
+
+
+
+In einigen Entwicklungsumgebungen kann es vorkommen, dass Caffe nicht gefunden wird. Dann muss CAFFE_ROOT (in beiden Dateien) noch nachgetragen werden.
